@@ -11,8 +11,8 @@ function ContactsList() {
     { app: "IG", info: "view_vievv" },
   ]
   return <ul>
-    {contacts.map((contact) => {
-      return <li key={contact.info}>
+    {contacts.map((contact,i) => {
+      return <li key={i}>
         [{contact.app}] {contact.info}
       </li>
     })}
@@ -31,8 +31,8 @@ function CallMeList() {
     { id: 3, name: "(hong)pepp" },
   ]
   return <ul>
-    {names.map((n) => {
-      return <li key={n.id}>
+    {names.map((n,i) => {
+      return <li key={i}>
         {n.name}
       </li>
     })}
@@ -53,8 +53,8 @@ function SkillList() {
     { topic: "Showering speed", score: "5/5 👍✨" },
   ]
   return <ul>
-    {skills.map((skill) => {
-      return <li key={skill.score}>
+    {skills.map((skill,i) => {
+      return <li key={i}>
         {skill.topic} : {skill.score}
       </li>
     })}
@@ -73,8 +73,8 @@ function HobbiesList() {
     { id: 3, activity: "Watching cartoons or horror movies" },
   ]
   return <ul>
-    {hobbies.map((hobby) => {
-      return <li key={hobby.id}>
+    {hobbies.map((hobby,i) => {
+      return <li key={i}>
         - {hobby.activity}
       </li>
     })}
@@ -127,7 +127,7 @@ function App() {
           <h1>Hobbies</h1>
           {HobbiesList()}
         </div>
-        
+
       </div>
     </>
   )
